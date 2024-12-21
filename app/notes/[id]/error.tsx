@@ -1,3 +1,4 @@
-export default function Error() {
-    return <p>error...</p>
-  }
+'use client'; 
+export default function error(){
+  return <p>error...</p>;
+}

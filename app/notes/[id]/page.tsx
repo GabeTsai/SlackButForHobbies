@@ -1,8 +1,9 @@
 import styles from '../Notes.module.css';
 
 async function getNote(noteId: string) {
+  const host = process.env.NEXT_PUBLIC_HOST
   const res = await fetch(
-    `http://127.0.0.1:8090/api/collections/notes/records/${noteId}`,
+    `${host}/api/collections/NotesDemo/records/${noteId}`,
     {
       next: { revalidate: 10 },
     }

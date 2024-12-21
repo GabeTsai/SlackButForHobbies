@@ -1,8 +1,9 @@
 // import PocketBase from 'pocketbase';
 import Link from 'next/link';
 import styles from './Notes.module.css';
-import CreateNote from './Create';
+import CreateNote from './CreateNote';
 
+// CHANGE CACHING BEHAVIOR AND RUNTIME
 // export const dynamic = 'auto',
 //   dynamicParams = true,
 //   revalidate = 0,
@@ -14,7 +15,9 @@ import CreateNote from './Create';
 async function getNotes() {
   // const db = new PocketBase('http://127.0.0.1:8090');
   // const result = await db.records.getList('notes');
-  const res = await fetch('http://127.0.0.1:8090/api/collections/notes/records?page=1&perPage=30', { cache: 'no-store' });
+  // cache: 'no-store' makes nextjs refetch items from the server with every request
+  const host = process.env.NEXT_PUBLIC_HOST
+  const res = await fetch(`${host}/api/collections/NotesDemo/records?page=1&perPage=30`, { cache: 'no-store' });
   const data = await res.json();
   return data?.items as any[];
 }
