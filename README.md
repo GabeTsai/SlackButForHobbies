@@ -12,5 +12,5 @@ Build a basic note-taking app with Next.js 13 and Pocketbase.
 `cd pocketbase_0.7.9_darwin_arm64`
 4. Start Pocketbase:
 `./pocketbase serve`
-5. Open the [Admin UI](http://127.0.0.1:8090/_/), create collection, and update security rules to allow read/write access. 
+5. Open the [Admin UI](process.env.NEXT_PUBLIC_HOST/_/), create collection, and update security rules to allow read/write access. 
 6. Add `experimental: { appDir: true }` to `next.config.js`

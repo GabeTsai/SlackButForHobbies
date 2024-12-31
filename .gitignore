@@ -36,3 +36,10 @@ yarn-error.log*
 next-env.d.ts
 
 .vscode
+
+pocketbase
+pocketbase_local
+
+pb_migrations/
+
+app/notes/

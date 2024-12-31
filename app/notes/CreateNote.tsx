@@ -10,6 +10,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import PocketBase from 'pocketbase';
 
 export default function CreateNote() {
   console.log('Host:', process.env.NEXT_PUBLIC_HOST);
@@ -18,34 +19,34 @@ export default function CreateNote() {
   const [error, setError] = useState<string | null>(null);
 
   const router = useRouter();
-
+  const db = new PocketBase(process.env.NEXT_PUBLIC_HOST);
   const create = async(e: React.FormEvent) => {
-    // const db = new PocketBase('process.env.NEXT_PUBLIC_HOST');
-
-    // await db.records.create('notes', {
-    //   title,
-    //   content,
-    // });
     e.preventDefault();
     setError(null);
     try{
-      const host = process.env.NEXT_PUBLIC_HOST
+      // const host = process.env.NEXT_PUBLIC_HOST
 
-      const res = await fetch(`${host}/api/collections/NotesDemo/records`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+      // const res = await fetch(`${host}/api/collections/notes/records`, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({
+      //     title,
+      //     content,
+      //   }),
+      // });
+
+      // if (!res.ok) {
+      //   throw new Error('Failed to create note');
+      // }
+
+      const data =  await db.collection('notes').create({
           title,
           content,
-        }),
       });
-
-      if (!res.ok) {
-        throw new Error('Failed to create note');
-      }
-
+      
+      console.log('Note created:', data);
       setContent('');
       setTitle('');
 

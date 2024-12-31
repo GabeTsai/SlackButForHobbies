@@ -1,0 +1,33 @@
+.channelSidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+.homeLink {
+    margin-bottom: 0px;
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.channelList {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.channelList li {
+    margin-bottom: 10px;
+}
+
+.channelList a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+
+.channelList a:hover {
+    text-decoration: underline;
+}

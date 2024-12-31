@@ -26,6 +26,8 @@
   background: #ffff00;
   box-shadow: 4px 4px 8px 1px #00000075;
   border-radius: 2px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .container {

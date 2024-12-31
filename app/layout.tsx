@@ -1,26 +1,22 @@
-/* eslint-disable @next/next/no-head-element */
-import Link from 'next/link';
+// app/layout.tsx
+import React from 'react';
+import { UserProvider } from './context/userContext';
+import ChannelSidebar from './sidebar/ChannelSidebar';
 import './globals.css';
+import styles from './Layout.module.css';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html>
+    <html lang="en">
       <body>
-        <main>
-          <nav>
-            <Link href="/">
-              Home
-            </Link>
-            <Link href="/notes">
-              Notes
-            </Link>
-          </nav>
-          {children}
-        </main>
+        <UserProvider>
+          <div className={styles.container}>
+            <nav className={styles.sidebar}>
+              <ChannelSidebar />
+            </nav>
+            <main className={styles.content}>{children}</main>
+          </div>
+        </UserProvider>
       </body>
     </html>
   );
