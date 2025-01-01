@@ -1,19 +1,31 @@
 import styles from '../Notes.module.css';
 
 async function getNote(noteId: string) {
-  const host = process.env.NEXT_PUBLIC_HOST
-  const res = await fetch(
-    `${host}/api/collections/NotesDemo/records/${noteId}`,
-    {
-      next: { revalidate: 10 },
+  const host = process.env.NEXT_PUBLIC_HOST;
+  try {
+    const res = await fetch(
+      `${host}/api/collections/notes/records/${noteId}`,
+      {
+        next: { revalidate: 10 },
+      }
+    );
+    if (!res.ok) {
+      throw new Error('Failed to fetch note');
     }
-  );
-  const data = await res.json();
-  return data;
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching note:', error);
+    return null;
+  }
 }
 
 export default async function NotePage({ params }: any) {
   const note = await getNote(params.id);
+
+  if (!note) {
+    return <div>Error loading note</div>;
+  }
 
   return (
     <div>

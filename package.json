@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "next": "^15.1.2",
-    "passport-saml": "^3.2.4",
     "pocketbase": "^0.24.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

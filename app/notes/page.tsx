@@ -17,7 +17,7 @@ async function getNotes() {
   // const result = await db.records.getList('notes');
   // cache: 'no-store' makes nextjs refetch items from the server with every request
   const host = process.env.NEXT_PUBLIC_HOST
-  const res = await fetch(`${host}/api/collections/NotesDemo/records?page=1&perPage=30`, { cache: 'no-store' });
+  const res = await fetch(`${host}/api/collections/notes/records?page=1&perPage=30`, { cache: 'no-store' });
   const data = await res.json();
   return data?.items as any[];
 }
