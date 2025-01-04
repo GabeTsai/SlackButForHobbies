@@ -43,3 +43,6 @@ pocketbase_local
 pb_migrations/
 
 app/notes/
+
+#virtual environment
+venv/
