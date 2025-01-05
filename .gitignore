@@ -25,6 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+.env
 # local env files
 .env*.local
 
@@ -46,3 +47,5 @@ app/notes/
 
 #virtual environment
 venv/
+
+interestack.com.key
