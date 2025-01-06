@@ -2,7 +2,13 @@ import pb from "../../lib/pocketbase";
 import ChannelPage from "./channelPage";
 // import { UserProvider } from "../../context/userContext";
 
-export default async function Page({ params }: { params: { id: string } }) {
+interface PageProps {
+    params: {
+        id: string;
+    };
+}
+
+export default async function Page({ params }: PageProps) {
     const channel = await pb.collection("channels").getOne(params.id);
 
     return (
@@ -13,7 +19,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     );
 }
 
-// prerender corresponding pages for each id during build process
+// Prerender corresponding pages for each id during build process
 export async function generateStaticParams() {
     const channels = await pb.collection("channels").getFullList();
 
