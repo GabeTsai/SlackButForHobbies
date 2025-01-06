@@ -37,7 +37,7 @@ export default function ChannelPage ( {channel} : {channel:RecordModel}) {
                 unsubscribe();
             }
         };
-    }, []);
+    }, [channel?.id]);
 
     const addMessage = async () => {
         try {
