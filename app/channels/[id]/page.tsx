@@ -2,14 +2,11 @@ import pb from "../../lib/pocketbase";
 import ChannelPage from "./channelPage";
 // import { UserProvider } from "../../context/userContext";
 
-interface PageProps {
-    params: {
-        id: string;
-    };
-}
+type PageProps = Promise<{ id: string }>;
 
-export default async function Page({ params }: PageProps) {
-    const channel = await pb.collection("channels").getOne(params.id);
+export default async function Page({ params }: {params: PageProps}) {
+    const {id} = await params;
+    const channel = await pb.collection("channels").getOne(id);
 
     return (
         <div>
