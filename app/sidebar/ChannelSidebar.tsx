@@ -11,6 +11,7 @@ const db = new PocketBase(process.env.NEXT_PUBLIC_HOST);
 export default function ChannelSidebar() {
   const userId = useContext(UserContext); // Get userId from context
   console.log('User ID in ChannelSidebar:', userId); // Log userId in ChannelSidebar
+  console.log('NEXT_PUBLIC_HOST:', process.env.NEXT_PUBLIC_HOST);
   const [channels, setChannels] = useState<RecordModel[]>([]);
 
   useEffect(() => {
