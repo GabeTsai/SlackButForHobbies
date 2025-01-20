@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "app/lib/pocketbase.ts", "app/about/page.tsx", "app/api/saml/acs.js", "app/channels/[id]/page.tsx"  ],
+, "app/lib/pocketbase.ts", "app/about/page.tsx", "app/api/saml/route.js", "app/channels/[id]/page.tsx"  ],
   "exclude": [
     "node_modules"
   ]
