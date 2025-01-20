@@ -1,0 +1,58 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" validUntil="2025-05-03T12:00:00Z" cacheDuration="PT604800S" entityID="https://interestack.com/">
+  <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIDjTCCAnUCFD7Ptpbq28WffOyoBaIiYx86JvG2MA0GCSqGSIb3DQEBCwUAMIGC
+MQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTERMA8GA1UEBwwIU3Rh
+bmZvcmQxFDASBgNVBAoMC0ludGVyZXN0YWNrMRQwEgYDVQQDDAtKb25hdGhhbiBZ
+ZTEfMB0GCSqGSIb3DQEJARYQeWVqb256QGdtYWlsLmNvbTAeFw0yNTAxMDgwMzA0
+MDZaFw0yODAxMDgwMzA0MDZaMIGCMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2Fs
+aWZvcm5pYTERMA8GA1UEBwwIU3RhbmZvcmQxFDASBgNVBAoMC0ludGVyZXN0YWNr
+MRQwEgYDVQQDDAtKb25hdGhhbiBZZTEfMB0GCSqGSIb3DQEJARYQeWVqb256QGdt
+YWlsLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL0zf+Ms+2a0
+lycs0CV0jtCxkqi8TP4YBZhvcuSH8rG34INhjQ63cKOsxd9r+H+opmoNut1WATeN
+nxig5/4ZyTCgyeRy3raW3yhpFRqCxfFWKs+dNiiKNN0bGIhmhMBaxBUSklaJ931Q
+Dh5aKaIE5hWuCx1CmvdNQF1BycEUqQeJZoNy1VZjFTIH6Q8QSZ44qH7y0sv4tvFf
+3E4C+DBj1Tbrhibe60J5RyemtBdHDx+w4BfW1ylNUoM/OcJitxZJukyVR+sZ3EKi
+7O2Rjj+APMlyL4/as/nHDm9xIEBoQdJyB6SdkbMppo+cPgT6g0q8NhDvjMN1dp36
+/huZwI5YNG8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAJvXlpExFSTyh/2aR1ky5
++Zy19Tkhw5cTEd2QhQQvmMzKRQ0/nX1uP52RCGFMeza44beBx6eUIIskSCAc7wuX
+iYD4ou50LVdR/IxiFDo4GIpQ4pCW39GLApIAnv0fm+oP1Lws3Qj7hDW6k8soU0u+
+88LcjSiQ914deKAD49mQgSOI2THE4puTSGd+9C+ikyeFUVYdtwOzC7VA0n3xiZpC
+Uo5SY0DHfR94KB90qSBnmq3G9nsyn8iYnvqNN1BXk6LC1y0g7ae4Mn3/ZJdlzBEN
+utGf3J7aUnULztRRsk01V0Rd+dYbeer75HInBQVjzD0KUlfMHUFyHwQ3s3NBHPPj
+ng==</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:KeyDescriptor use="encryption">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIDjTCCAnUCFD7Ptpbq28WffOyoBaIiYx86JvG2MA0GCSqGSIb3DQEBCwUAMIGC
+MQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTERMA8GA1UEBwwIU3Rh
+bmZvcmQxFDASBgNVBAoMC0ludGVyZXN0YWNrMRQwEgYDVQQDDAtKb25hdGhhbiBZ
+ZTEfMB0GCSqGSIb3DQEJARYQeWVqb256QGdtYWlsLmNvbTAeFw0yNTAxMDgwMzA0
+MDZaFw0yODAxMDgwMzA0MDZaMIGCMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2Fs
+aWZvcm5pYTERMA8GA1UEBwwIU3RhbmZvcmQxFDASBgNVBAoMC0ludGVyZXN0YWNr
+MRQwEgYDVQQDDAtKb25hdGhhbiBZZTEfMB0GCSqGSIb3DQEJARYQeWVqb256QGdt
+YWlsLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL0zf+Ms+2a0
+lycs0CV0jtCxkqi8TP4YBZhvcuSH8rG34INhjQ63cKOsxd9r+H+opmoNut1WATeN
+nxig5/4ZyTCgyeRy3raW3yhpFRqCxfFWKs+dNiiKNN0bGIhmhMBaxBUSklaJ931Q
+Dh5aKaIE5hWuCx1CmvdNQF1BycEUqQeJZoNy1VZjFTIH6Q8QSZ44qH7y0sv4tvFf
+3E4C+DBj1Tbrhibe60J5RyemtBdHDx+w4BfW1ylNUoM/OcJitxZJukyVR+sZ3EKi
+7O2Rjj+APMlyL4/as/nHDm9xIEBoQdJyB6SdkbMppo+cPgT6g0q8NhDvjMN1dp36
+/huZwI5YNG8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAJvXlpExFSTyh/2aR1ky5
++Zy19Tkhw5cTEd2QhQQvmMzKRQ0/nX1uP52RCGFMeza44beBx6eUIIskSCAc7wuX
+iYD4ou50LVdR/IxiFDo4GIpQ4pCW39GLApIAnv0fm+oP1Lws3Qj7hDW6k8soU0u+
+88LcjSiQ914deKAD49mQgSOI2THE4puTSGd+9C+ikyeFUVYdtwOzC7VA0n3xiZpC
+Uo5SY0DHfR94KB90qSBnmq3G9nsyn8iYnvqNN1BXk6LC1y0g7ae4Mn3/ZJdlzBEN
+utGf3J7aUnULztRRsk01V0Rd+dYbeer75HInBQVjzD0KUlfMHUFyHwQ3s3NBHPPj
+ng==</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://interestack.com/api/saml/acs" index="1"/>
+  </md:SPSSODescriptor>
+</md:EntityDescriptor>
