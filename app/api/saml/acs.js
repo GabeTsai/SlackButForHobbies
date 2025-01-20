@@ -1,12 +1,14 @@
 import { ServiceProvider, IdentityProvider } from "saml2-js";
-// import fs from "fs";
 import fetch from "node-fetch";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 // Fetch the Stanford IdP's certificate dynamically
 async function fetchStanfordCertificate() {
   const response = await fetch("https://login.stanford.edu/idp.crt");
+  if (!response.ok) {
+    throw new Error("Failed to fetch Stanford IdP certificate");
+  }
   return response.text();
 }
 
@@ -14,6 +16,22 @@ async function fetchStanfordCertificate() {
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).send("Method Not Allowed");
+  }
+
+  // Check the X-Forwarded-Host and Origin headers
+  const xForwardedHost = req.headers['x-forwarded-host'];
+  const originHeader = req.headers['origin'];
+
+  // Log the headers
+  console.log("X-Forwarded-Host:", xForwardedHost);
+  console.log("Origin:", originHeader);
+
+  if (xForwardedHost !== originHeader) {
+    return res.status(400).json({
+      message: "X-Forwarded-Host and Origin headers do not match",
+      xForwardedHost,
+      originHeader
+    });
   }
 
   try {
