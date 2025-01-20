@@ -1,6 +1,6 @@
 import PocketBase from "pocketbase";
 
-const pb = new PocketBase("http://143.198.104.253");
+const pb = new PocketBase(process.env.NEXT_PUBLIC_HOST);
 
 pb.health.check()
   .then((res) => console.log("PocketBase is healthy:", res))
