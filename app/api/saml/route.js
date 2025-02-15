@@ -9,7 +9,15 @@ export async function GET(req) {
   
   export async function POST(req) {
     try {
-      console.log(req)
+      console.log("Received POST request:", {
+        headers: req.headers,
+        method: req.method,
+        url: req.url,
+      });
+
+      // Sample code to read the request body (assuming JSON payload)
+      const requestBody = await req.json();
+      console.log("Request Body:", requestBody);
       // Your SAML handling logic here
       return new Response(
         JSON.stringify({ message: "POST to SAML endpoint" }),
