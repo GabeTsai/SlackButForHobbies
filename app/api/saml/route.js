@@ -9,6 +9,7 @@ export async function GET(req) {
   
   export async function POST(req) {
     try {
+      console.log(req)
       // Your SAML handling logic here
       return new Response(
         JSON.stringify({ message: "POST to SAML endpoint" }),
