@@ -15,9 +15,9 @@ export async function GET(req) {
         url: req.url,
       });
 
-      // Sample code to read the request body (assuming JSON payload)
-      const requestBody = await req.json();
+      const requestBody = await req.text();
       console.log("Request Body:", requestBody);
+      
       // Your SAML handling logic here
       return new Response(
         JSON.stringify({ message: "POST to SAML endpoint" }),
